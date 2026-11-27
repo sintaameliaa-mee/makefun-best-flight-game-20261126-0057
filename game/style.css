@@ -1,0 +1,45 @@
+/* style.css — the page around the canvas: full-screen, no scrollbars,
+   nothing loaded from the network. The game itself is drawn on the canvas. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0a1826;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+#loading {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background: rgba(8, 18, 30, 0.72);
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+.noscript {
+  position: fixed;
+  left: 50%;
+  top: 60%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  background: rgba(8, 18, 30, 0.85);
+  padding: 12px 18px;
+  border-radius: 8px;
+}

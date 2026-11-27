@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sayap Nusantara — Game Terbang</title>
+<meta name="description" content="Sayap Nusantara: game terbang 3D di atas Pulau Nusaria. Lewati cincin emas, jaga bahan bakar, dan mendarat dengan selamat di runway 27.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<canvas id="game" aria-label="Sayap Nusantara — game terbang"></canvas>
+<div id="loading">Memuat Sayap Nusantara…</div>
+<noscript><p class="noscript">Sayap Nusantara butuh JavaScript untuk terbang.</p></noscript>
+<script type="module" src="./src/main.js"></script>
+<script>
+  // The loading note disappears once the first frame is painted.
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var el = document.getElementById('loading');
+      if (el) el.style.display = 'none';
+    }, 600);
+  });
+</script>
+</body>
+</html>
